@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skyline — Weather Checker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="sky-strip" id="skyStrip"></div>
+
+  <main class="page">
+    <header class="page-header">
+      <p class="eyebrow">Welcome To</p>
+      <h1 class="title">Skyline</h1>
+      <p class="subtitle">Check the sky, anywhere, before you step out.</p>
+    </header>
+
+    <section class="card">
+      <form id="searchForm" class="search-row" autocomplete="off">
+        <input
+          type="text"
+          id="cityInput"
+          class="city-input"
+          placeholder="Enter a city — e.g. Dhaka"
+          required
+        >
+        <button type="submit" class="btn" id="searchBtn">Check</button>
+      </form>
+
+      <div id="statusMsg" class="status-msg" role="status" aria-live="polite"></div>
+
+      <div id="result" class="result hidden">
+        <div class="result-top">
+          <div>
+            <p class="place-name" id="placeName">—</p>
+            <p class="place-sub" id="placeSub">—</p>
+          </div>
+          <div class="temp-block">
+            <span class="temp-value" id="tempValue">—</span>
+            <span class="temp-unit">°C</span>
+          </div>
+        </div>
+
+        <div class="condition-block">
+          <p class="condition" id="condition">—</p>
+          <p class="feels-like">Feels like <span id="feelsLike">—</span></p>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat">
+            <span class="stat-label">Humidity</span>
+            <span class="stat-value" id="humidity">—</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Wind</span>
+            <span class="stat-value" id="wind">—</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Pressure</span>
+            <span class="stat-value" id="pressure">—</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <p>Todays Weather</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
